@@ -8,7 +8,22 @@ RM := rm -rf
 
 # All of the sources participating in the build are defined here
 -include sources.mk
--include src/subdir.mk
+-include project5.9/src/subdir.mk
+-include project5.9/Debug/src/subdir.mk
+-include project5.8/src/subdir.mk
+-include project5.8/Debug/src/subdir.mk
+-include project5.7/src/subdir.mk
+-include project5.7/Debug/src/subdir.mk
+-include project5.4/src/subdir.mk
+-include project5.4/Debug/src/subdir.mk
+-include project5.2/src/subdir.mk
+-include project5.2/Debug/src/subdir.mk
+-include project5.11/src/subdir.mk
+-include project5.11/Debug/src/subdir.mk
+-include project5.10/src/subdir.mk
+-include project5.10/Debug/src/subdir.mk
+-include project5.1/src/subdir.mk
+-include project5.1/Debug/src/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -23,19 +38,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: project5.7
+all: chapter5
 
 # Tool invocations
-project5.7: $(OBJS) $(USER_OBJS)
+chapter5: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: MacOS X C Linker'
-	gcc  -o "project5.7" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "chapter5" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) project5.7
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) chapter5
 	-@echo ' '
 
 .PHONY: all clean dependents

@@ -12,6 +12,6 @@
 #include <stdlib.h>
 
 int main(void) {
-	puts("Will crete new projects for every chapter"); /* prints !!!Hello World!!! */
+	puts("Importing from Git produces C/C++ index errors"); /* prints !!!Hello World!!! */
 	return EXIT_SUCCESS;
 }

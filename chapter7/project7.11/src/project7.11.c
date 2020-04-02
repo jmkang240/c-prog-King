@@ -12,6 +12,6 @@
 #include <stdlib.h>
 
 int main(void) {
-	puts("!!!Looks like Im going to have to do this the hard way!!!"); /* prints !!!Hello World!!! */
+	puts("Remove C/C++ index error?"); /* prints !!!Hello World!!! */
 	return EXIT_SUCCESS;
 }

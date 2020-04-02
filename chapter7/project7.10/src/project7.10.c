@@ -12,6 +12,6 @@
 #include <stdlib.h>
 
 int main(void) {
-	puts("Clean changes"); /* prints !!!Hello World!!! */
+	puts("Will crete new projects for every chapter"); /* prints !!!Hello World!!! */
 	return EXIT_SUCCESS;
 }

@@ -12,6 +12,6 @@
 #include <stdlib.h>
 
 int main(void) {
-	puts("!!!This should be on git!!!"); /* prints !!!Hello World!!! */
+	puts("Clean changes"); /* prints !!!Hello World!!! */
 	return EXIT_SUCCESS;
 }

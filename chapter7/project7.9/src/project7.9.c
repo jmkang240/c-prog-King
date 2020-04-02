@@ -16,7 +16,7 @@ int main(void) {
 	int hour, min, hour1, min2;
 	char c1, c2;
 
-	printf("Enter a 12-hour time ");
+	printf("Enter a 12-hour time: ");
 	scanf("%d:%d %c%c", &hour, &min, &c1, &c2);
 	c1 = toupper(c1);
 	c2 = toupper(c2);

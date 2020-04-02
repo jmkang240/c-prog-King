@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : 10.c
+ Name        : 12.c
  Author      : 
  Version     :
  Copyright   : Your copyright notice
@@ -12,20 +12,19 @@
 #include <stdlib.h>
 
 int main(void) {
-
-	int vowels=0;
+	float value, num1;
 	char c;
-	printf("Enter a sentence: ");
 
+	printf("Enter an expression: ");
 	while(1)
 	{
-		c = getchar();
-		c = toupper(c);
-		if( c == '\n')
-			break;
-		if(c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
-			vowels++;
+		scanf("%f", &num1);
+		scanf("%c", &c);
+
+		if(c == '*' || c == '/' || c == '-' || c == '+')
 	}
-	printf("Your sentence contains %d vowels ", vowels);
+
+	printf("Value of expression: %f", value);
+
 	return EXIT_SUCCESS;
 }

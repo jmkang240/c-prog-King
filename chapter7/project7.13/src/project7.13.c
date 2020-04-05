@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : 10.c
+ Name        : 13.c
  Author      : 
  Version     :
  Copyright   : Your copyright notice
@@ -12,16 +12,20 @@
 #include <stdlib.h>
 
 int main(void) {
-
-	int vowels=0;
 	char c;
-	printf("Enter a sentence: ");
+	int space=0;
+	float word=0;
 
-	while((c=toupper(getchar())) != '\n')
+	printf("Enter a sentence: ");
+	while((c=getchar()) != '\n' )//|| (c=getchar()) != '.')
 	{
-		if(c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U')
-			vowels++;
+		word++;
+		if(c == ' ')
+			space++;
+		printf("word = %.1f\n space=%d\n", word, space);
+
 	}
-	printf("Your sentence contains %d vowels ", vowels);
+	printf("Average word length: %.1f", word/(space+2));
+
 	return EXIT_SUCCESS;
 }

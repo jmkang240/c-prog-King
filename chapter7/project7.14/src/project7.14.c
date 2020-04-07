@@ -1,6 +1,6 @@
 /*
  ============================================================================
- Name        : 13.c
+ Name        : 14.c
  Author      : 
  Version     :
  Copyright   : Your copyright notice
@@ -10,21 +10,24 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int main(void) {
-	char c;
-	int space=0;
-	float word=0;
+	double x, y=1, div, avg;
 
-	printf("Enter a sentence: ");
-	while((c=getchar()) != '\n' )
+	printf("Enter a positive number: ");
+	scanf("%lf", &x);
+
+	for(;;)
 	{
-		if(c != ' ')
-			word++;
+		div = x/y;
+		avg = (div + y)/2;
+		if((fabs(y-avg)) < (0.00001*y))
+			break;
 		else
-			space++;
+			y=avg;
 	}
-	printf("Average word length: %.1f", word/(space+1));
+	printf("Square root: %.5lf", y);
 
 	return EXIT_SUCCESS;
 }

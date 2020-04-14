@@ -12,10 +12,33 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#define M 31
-#define N 24
+//#define M 31
+//#define N 24
+#define A 10
 
 int main(void) {
+
+	int digit_seen[A] = {false};
+	int digit, sum=0;
+	long n;
+
+	printf("Enter a number: ");
+	scanf("%ld", &n);
+
+	while(n>0){
+		digit = n % 10;
+		digit_seen[digit]++;
+		n /= 10;
+	}
+
+	printf("Repeated digits:");
+	for(int i=1; i < A; i++){
+		if(digit_seen[i] > 1)
+			printf(" %d", i);
+		sum += digit_seen[i];
+	}
+	if(sum == 0)
+		printf(" N/A");
 
 /* Exercise 8.5 */
 //	int fib_numb[N] = {[0]=0,[1]=1};
@@ -27,22 +50,21 @@ int main(void) {
 //	}
 
 /* Exercise 8.9 */
-	int temp[M][N] = {false};
-	float sum;
-
-	srand((unsigned) time(NULL));
-
-	printf("Hourly Temperatures in December in Celsius: \n");
-	for(int i=1; i<M; i++){
-		printf("Day %d: ", i);
-		for(int j=0; j<N; j++){
-			temp[i][j] = rand() % 9;
-			sum += temp[i][j];
-			printf("%2d", temp[i][j]);
-		}
-		printf(" Daily average = %.2f\n", sum/(N*i));
-	}
-	printf("Average Temperature in Dec: %.2f", sum/(M*N));
-
+//	int temp[M][N] = {false};
+//	float sum;
+//
+//	srand((unsigned) time(NULL));
+//
+//	printf("Hourly Temperatures in December in Celsius: \n");
+//	for(int i=1; i<M; i++){
+//		printf("Day %d: ", i);
+//		for(int j=0; j<N; j++){
+//			temp[i][j] = rand() % 9;
+//			sum += temp[i][j];
+//			printf("%2d", temp[i][j]);
+//		}
+//		printf(" Daily average = %.2f\n", sum/(N*i));
+//	}
+//	printf("Average Temperature in Dec: %.2f", sum/(M*N));
 	return EXIT_SUCCESS;
 }
